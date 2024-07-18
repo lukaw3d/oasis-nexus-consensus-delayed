@@ -5,8 +5,10 @@ on:
     - cron: '*/10 * * * *'
 
 jobs:
-  prd-mainnet-matches-testnet:
+  append:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
       - run: node append.mjs >> log.json
