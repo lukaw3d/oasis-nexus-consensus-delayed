@@ -1,0 +1,18 @@
+on:
+  # Triggered every 10min or manually
+  workflow_dispatch:
+  schedule:
+    - cron: '*/10 * * * *'
+
+jobs:
+  prd-mainnet-matches-testnet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: node append.mjs >> log.json
+      - name: Push
+        run: |
+          git config --global user.name 'automated'
+          git config --global user.email 'automated@users.noreply.github.com'
+          git commit -am "Automated"
+          git push
