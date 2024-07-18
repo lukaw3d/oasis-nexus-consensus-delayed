@@ -12,6 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: node append.mjs >> log.json
+      - run: node append2.mjs >> log_latest_tx.json
       - name: Push
         run: |
           git config --global user.name 'automated'
