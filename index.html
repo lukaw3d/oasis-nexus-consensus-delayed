@@ -52,6 +52,7 @@ const data = dd.map(a=> [a.request_time, a.latest_block_time_age_ms/60000]);
 const data2 = dd.map(a=> [a.request_time, a.latest_node_block_diff]);
 
 option = {
+  dataZoom: [{ type: 'slider' }, { type: 'inside' }],
   tooltip: {trigger: 'axis'},
   xAxis: {type: 'time'},
   yAxis: [
