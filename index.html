@@ -40,7 +40,7 @@
 
     var option;
 
-    raw = await (await fetch('./log.json')).text()
+    raw = await (await fetch('https://raw.githubusercontent.com/lukaw3d/oasis-nexus-consensus-delayed/main/log.json')).text()
     dd = JSON.parse('[' + raw.trim().split('\n').join(',') + ']');
 
 
