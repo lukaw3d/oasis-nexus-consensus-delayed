@@ -52,8 +52,8 @@
       tooltip: {trigger: 'axis'},
       xAxis: {type: 'time'},
       yAxis: [
-        {type: 'value', name: 'Last block _ minutes ago', axisLabel: { formatter: '{value} min' }},
-        {type: 'value', name: '# Blocks behind node', axisLabel: { formatter: '{value} blocks' }, alignTicks: true },
+        {type: 'value', min: 0, name: 'Last block _ minutes ago', axisLabel: { formatter: '{value} min' }},
+        {type: 'value', min: 0, name: '# Blocks behind node', axisLabel: { formatter: '{value} blocks' }, alignTicks: true },
       ],
       series: [
         {type: 'line', data: data, name: 'Last block _ minutes ago', yAxisIndex: 0 },
