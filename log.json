@@ -5648,3 +5648,4 @@
 {"latest_block":20842360,"latest_block_time":"2024-09-01T06:51:48Z","latest_node_block":20842361,"latest_update_age_ms":3014,"request_time":"2024-09-01T06:52:05.867Z","latest_block_time_age_ms":17867,"latest_node_block_diff":1}
 {"latest_block":20842476,"latest_block_time":"2024-09-01T07:03:12Z","latest_node_block":20842476,"latest_update_age_ms":403,"request_time":"2024-09-01T07:03:22.779Z","latest_block_time_age_ms":10779,"latest_node_block_diff":0}
 {"latest_block":20842596,"latest_block_time":"2024-09-01T07:14:56Z","latest_node_block":20842597,"latest_update_age_ms":720,"request_time":"2024-09-01T07:15:11.497Z","latest_block_time_age_ms":15497,"latest_node_block_diff":1}
+{"latest_block":20842680,"latest_block_time":"2024-09-01T07:23:11Z","latest_node_block":20842681,"latest_update_age_ms":6875,"request_time":"2024-09-01T07:23:28.243Z","latest_block_time_age_ms":17243,"latest_node_block_diff":1}
