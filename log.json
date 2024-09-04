@@ -6035,3 +6035,4 @@
 {"latest_block":20885934,"latest_block_time":"2024-09-04T06:24:57Z","latest_node_block":20885934,"latest_update_age_ms":4026,"request_time":"2024-09-04T06:31:19.593Z","latest_block_time_age_ms":382593,"latest_node_block_diff":0}
 {"latest_block":20885986,"latest_block_time":"2024-09-04T06:30:20Z","latest_node_block":20886037,"latest_update_age_ms":2160,"request_time":"2024-09-04T06:49:13.983Z","latest_block_time_age_ms":1133983,"latest_node_block_diff":51}
 {"latest_block":20886049,"latest_block_time":"2024-09-04T06:36:31Z","latest_node_block":20886207,"latest_update_age_ms":1314,"request_time":"2024-09-04T06:52:11.918Z","latest_block_time_age_ms":940918,"latest_node_block_diff":158}
+{"latest_block":20886288,"latest_block_time":"2024-09-04T06:59:58Z","latest_node_block":20886323,"latest_update_age_ms":1587,"request_time":"2024-09-04T07:03:31.462Z","latest_block_time_age_ms":213462,"latest_node_block_diff":35}
