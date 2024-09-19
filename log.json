@@ -8035,3 +8035,4 @@
 {"latest_block":21113129,"latest_block_time":"2024-09-19T19:52:04Z","latest_node_block":21113130,"latest_update_age_ms":3523,"request_time":"2024-09-19T19:52:17.336Z","latest_block_time_age_ms":13336,"latest_node_block_diff":1}
 {"latest_block":21113242,"latest_block_time":"2024-09-19T20:03:10Z","latest_node_block":21113243,"latest_update_age_ms":9594,"request_time":"2024-09-19T20:03:29.929Z","latest_block_time_age_ms":19929,"latest_node_block_diff":1}
 {"latest_block":21113363,"latest_block_time":"2024-09-19T20:15:29Z","latest_node_block":21113367,"latest_update_age_ms":5711,"request_time":"2024-09-19T20:16:02.003Z","latest_block_time_age_ms":33003,"latest_node_block_diff":4}
+{"latest_block":21113471,"latest_block_time":"2024-09-19T20:26:10Z","latest_node_block":21113473,"latest_update_age_ms":10261,"request_time":"2024-09-19T20:26:30.077Z","latest_block_time_age_ms":20077,"latest_node_block_diff":2}
