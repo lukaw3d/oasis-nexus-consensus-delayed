@@ -8263,3 +8263,4 @@
 {"latest_block":21139509,"latest_block_time":"2024-09-21T15:03:55Z","latest_node_block":21139509,"latest_update_age_ms":739,"request_time":"2024-09-21T15:04:05.111Z","latest_block_time_age_ms":10111,"latest_node_block_diff":0}
 {"latest_block":21139584,"latest_block_time":"2024-09-21T15:11:21Z","latest_node_block":21139584,"latest_update_age_ms":5631,"request_time":"2024-09-21T15:16:10.882Z","latest_block_time_age_ms":289882,"latest_node_block_diff":0}
 {"latest_block":21139647,"latest_block_time":"2024-09-21T15:17:33Z","latest_node_block":21139648,"latest_update_age_ms":7334,"request_time":"2024-09-21T15:26:47.470Z","latest_block_time_age_ms":554470,"latest_node_block_diff":1}
+{"latest_block":21139800,"latest_block_time":"2024-09-21T15:32:42Z","latest_node_block":21139817,"latest_update_age_ms":2726,"request_time":"2024-09-21T15:34:34.759Z","latest_block_time_age_ms":112759,"latest_node_block_diff":17}
