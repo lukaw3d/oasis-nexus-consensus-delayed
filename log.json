@@ -8788,3 +8788,4 @@
 {"msg":"storage error: ERROR: column \"gas_limit\" does not exist (SQLSTATE 42703)","request_time":"2024-09-25T19:14:33.886Z","latest_block_time_age_ms":null,"latest_node_block_diff":null}
 {"msg":"storage error: ERROR: column \"gas_limit\" does not exist (SQLSTATE 42703)","request_time":"2024-09-25T19:22:22.843Z","latest_block_time_age_ms":null,"latest_node_block_diff":null}
 {"msg":"storage error: ERROR: column \"gas_limit\" does not exist (SQLSTATE 42703)","request_time":"2024-09-25T19:32:29.279Z","latest_block_time_age_ms":null,"latest_node_block_diff":null}
+{"msg":"storage error: ERROR: column \"gas_limit\" does not exist (SQLSTATE 42703)","request_time":"2024-09-25T19:42:08.442Z","latest_block_time_age_ms":null,"latest_node_block_diff":null}
