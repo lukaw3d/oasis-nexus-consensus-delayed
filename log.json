@@ -8785,3 +8785,4 @@
 {"latest_block":21200232,"latest_block_time":"2024-09-25T18:35:21Z","latest_node_block":21200236,"latest_update_age_ms":3027,"request_time":"2024-09-25T18:44:42.751Z","latest_block_time_age_ms":561751,"latest_node_block_diff":4}
 {"latest_block":21200378,"latest_block_time":"2024-09-25T18:49:44Z","latest_node_block":21200402,"latest_update_age_ms":3251,"request_time":"2024-09-25T18:52:18.992Z","latest_block_time_age_ms":154992,"latest_node_block_diff":24}
 {"latest_block":21200512,"latest_block_time":"2024-09-25T19:02:49Z","latest_node_block":21200513,"latest_update_age_ms":2394,"request_time":"2024-09-25T19:03:06.216Z","latest_block_time_age_ms":17216,"latest_node_block_diff":1}
+{"msg":"storage error: ERROR: column \"gas_limit\" does not exist (SQLSTATE 42703)","request_time":"2024-09-25T19:14:33.886Z","latest_block_time_age_ms":null,"latest_node_block_diff":null}
