@@ -9192,3 +9192,4 @@
 {"latest_block":21248011,"latest_block_time":"2024-09-29T00:58:16Z","latest_node_block":21248068,"latest_update_age_ms":1593,"request_time":"2024-09-29T01:04:00.963Z","latest_block_time_age_ms":344963,"latest_node_block_diff":57}
 {"latest_block":21248482,"latest_block_time":"2024-09-29T01:44:39Z","latest_node_block":21248482,"latest_update_age_ms":3489,"request_time":"2024-09-29T01:44:49.087Z","latest_block_time_age_ms":10087,"latest_node_block_diff":0}
 {"latest_block":21248817,"latest_block_time":"2024-09-29T02:17:21Z","latest_node_block":21248818,"latest_update_age_ms":7153,"request_time":"2024-09-29T02:17:36.988Z","latest_block_time_age_ms":15988,"latest_node_block_diff":1}
+{"latest_block":21248973,"latest_block_time":"2024-09-29T02:32:41Z","latest_node_block":21248973,"latest_update_age_ms":4171,"request_time":"2024-09-29T02:45:42.480Z","latest_block_time_age_ms":781480,"latest_node_block_diff":0}
