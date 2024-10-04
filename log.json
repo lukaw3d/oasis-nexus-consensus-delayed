@@ -9868,3 +9868,4 @@
 {"latest_block":21327678,"latest_block_time":"2024-10-04T11:36:20Z","latest_node_block":21327679,"latest_update_age_ms":17496,"request_time":"2024-10-04T11:42:15.960Z","latest_block_time_age_ms":355960,"latest_node_block_diff":1}
 {"latest_block":21327744,"latest_block_time":"2024-10-04T11:42:45Z","latest_node_block":21327782,"latest_update_age_ms":1476,"request_time":"2024-10-04T11:52:17.406Z","latest_block_time_age_ms":572406,"latest_node_block_diff":38}
 {"latest_block":21327972,"latest_block_time":"2024-10-04T12:05:07Z","latest_node_block":21327972,"latest_update_age_ms":5720,"request_time":"2024-10-04T12:05:20.907Z","latest_block_time_age_ms":13907,"latest_node_block_diff":0}
+{"latest_block":21328098,"latest_block_time":"2024-10-04T12:17:24Z","latest_node_block":21328100,"latest_update_age_ms":4950,"request_time":"2024-10-04T12:17:46.435Z","latest_block_time_age_ms":22435,"latest_node_block_diff":2}
