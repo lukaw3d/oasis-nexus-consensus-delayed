@@ -1,72 +1,83 @@
-<!DOCTYPE html>
-<html lang="en" style="height: 100%">
-<head>
-  <meta charset="utf-8">
-</head>
-<body style="height: 100%; margin: 0">
-  <div id="container" style="height: 100%"></div>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
+
+    <style>
+      #vis {
+        width: 95vw;
+        height: 95vh;
+      }
+      canvas {
+        cursor: grab;
+      }
+      .vega-actions a {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="vis"></div>
+
+    <script>
+      (async () => {
 
 
-  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
 
-  <!-- Uncomment this line if you want to dataTool extension
-  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.5.1/dist/extension/dataTool.min.js"></script>
-  -->
-  <!-- Uncomment this line if you want to use gl extension
-  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
-  -->
-  <!-- Uncomment this line if you want to echarts-stat extension
-  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
-  -->
-  <!-- Uncomment this line if you want to echarts-graph-modularity extension
-  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-graph-modularity@2/dist/echarts-graph-modularity.min.js"></script>
-  -->
-  <!-- Uncomment this line if you want to use map
-  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
-  -->
-  <!-- Uncomment these two lines if you want to use bmap extension
-  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
-  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.5.1/dist/extension/bmap.min.js"></script>
-  -->
+      raw = await (await fetch('https://raw.githubusercontent.com/lukaw3d/oasis-nexus-consensus-delayed/main/log.json')).text()
+      data = JSON.parse('[' + raw.trim().split('\n').join(',') + ']');
+      data.forEach(a => a['latest_block_time_age_min'] = Math.max(a.latest_block_time_age_ms/60000, 0))
+      data2 = data.map(a=> [a.request_time, a.latest_block_time_age_ms/60000]);
 
-  <script type="text/javascript">
-(async () => {
-    var dom = document.getElementById('container');
-    var myChart = echarts.init(dom, null, {
-      renderer: 'canvas',
-      useDirtyRect: false
-    });
-    var app = {};
+      vlSpec = {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "width": "container",
+        "height": "container",
+        "data": {values: data},
+        "encoding": {
+          "x": {
+            "field": "request_time",
+            "type": "temporal",
+          },
+        },
+        "layer": [
+          {
+            "mark": {"type": "line", "color": "#85A9C5"},
+            "encoding": {
+              "y": {
+                "field": "latest_block_time_age_min",
+                "type": "quantitative",
+                "title": "Last block _ minutes ago",
+                "axis": {"titleColor": "#85A9C5"}
+              },
+            },
+          },
+          {
+            "params": [{
+              "name": "grid",
+              "select": {"type": "interval", "encodings": ["x"]},
+              "bind": "scales"
+            }],
+            "mark": {"type": "line", point: {fill: '#85C5A6'}, strokeDash: [1, 8], "color": "#85C5A6"},
+            "encoding": {
+              "y": {
+                "field": "latest_node_block_diff",
+                "type": "quantitative",
+                "title": "# Blocks behind node",
+                "axis": {"titleColor": "#85C5A6"}
+              },
+            },
+          },
+        ],
+        "resolve": {"scale": {"y": "independent"}},
+      }
 
-    var option;
-
-    raw = await (await fetch('https://raw.githubusercontent.com/lukaw3d/oasis-nexus-consensus-delayed/main/log.json')).text()
-    dd = JSON.parse('[' + raw.trim().split('\n').join(',') + ']');
-
-
-    const data = dd.map(a=> [a.request_time, a.latest_block_time_age_ms/60000]);
-    const data2 = dd.map(a=> [a.request_time, a.latest_node_block_diff]);
-
-    option = {
-      dataZoom: [{ type: 'slider' }, { type: 'inside' }],
-      tooltip: {trigger: 'axis'},
-      xAxis: {type: 'time'},
-      yAxis: [
-        {type: 'value', min: 0, name: 'Last block _ minutes ago', axisLabel: { formatter: '{value} min' }},
-        {type: 'value', min: 0, name: '# Blocks behind node', axisLabel: { formatter: '{value} blocks' }, alignTicks: true },
-      ],
-      series: [
-        {type: 'line', data: data, name: 'Last block _ minutes ago', yAxisIndex: 0 },
-        {type: 'scatter', data: data2, name: '# Blocks behind node', yAxisIndex: 1 },
-      ]
-    };
-
-    if (option && typeof option === 'object') {
-      myChart.setOption(option);
-    }
-
-    window.addEventListener('resize', myChart.resize);
-})();
-  </script>
-</body>
+      vegaEmbed('#vis', vlSpec);
+      })();
+    </script>
+  </body>
 </html>
