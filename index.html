@@ -8,6 +8,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
 
     <style>
+      html {
+        color-scheme: dark;
+      }
       #vis {
         width: 95vw;
         height: 95vh;
@@ -76,7 +79,7 @@
         "resolve": {"scale": {"y": "independent"}},
       }
 
-      vegaEmbed('#vis', vlSpec);
+      vegaEmbed('#vis', vlSpec, {theme: 'dark'});
       })();
     </script>
   </body>
