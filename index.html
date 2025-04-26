@@ -33,8 +33,10 @@
 
       raw = await (await fetch('https://raw.githubusercontent.com/lukaw3d/oasis-nexus-consensus-delayed/main/log.json')).text()
       data = JSON.parse('[' + raw.trim().split('\n').join(',') + ']');
-      data.forEach(a => a['latest_block_time_age_min'] = Math.max(a.latest_block_time_age_ms/60000, 0))
-      data2 = data.map(a=> [a.request_time, a.latest_block_time_age_ms/60000]);
+      data.forEach(a => {
+        a['latest_block_time_age_min'] = Math.max(a.latest_block_time_age_ms/60000, 0)
+        a['latest_sapphire_block_time_age_min'] = Math.max(a.latest_sapphire_block_time_age_ms/60000, 0)
+      })
 
       vlSpec = {
         "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
@@ -49,15 +51,30 @@
         },
         "layer": [
           {
-            "mark": {"type": "line", "color": "#85A9C5"},
-            "encoding": {
-              "y": {
-                "field": "latest_block_time_age_min",
-                "type": "quantitative",
-                "title": "Last block _ minutes ago",
-                "axis": {"titleColor": "#85A9C5"}
+            "layer": [
+              {
+                "mark": {"type": "line", "color": "#85A9C5"},
+                "encoding": {
+                  "y": {
+                    "field": "latest_block_time_age_min",
+                    "type": "quantitative",
+                    "title": "Last block _ minutes ago",
+                    "axis": {"titleColor": "#85A9C5"}
+                  },
+                },
               },
-            },
+              {
+                "mark": {"type": "line", "color": "#ffaebc"},
+                "encoding": {
+                  "y": {
+                    "field": "latest_sapphire_block_time_age_min",
+                    "type": "quantitative",
+                    "title": "Last sapphire block _ minutes ago",
+                    "axis": {"titleColor": "#ffaebc"}
+                  },
+                },
+              },
+            ]
           },
           {
             "params": [{
