@@ -17,5 +17,4 @@ jobs:
         run: |
           git config --global user.name 'automated'
           git config --global user.email 'automated@users.noreply.github.com'
-          git commit -am "Automated"
-          git push
+          git diff --exit-code || git commit -am "Automated" && git push
