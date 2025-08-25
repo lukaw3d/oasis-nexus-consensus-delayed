@@ -53,7 +53,7 @@
           {
             "layer": [
               {
-                "mark": {"type": "line", "color": "#85A9C5"},
+                "mark": {"type": "rule", point: {fill: '#85A9C5'}, "color": "#85A9C5"},
                 "encoding": {
                   "y": {
                     "field": "latest_block_time_age_min",
@@ -64,7 +64,7 @@
                 },
               },
               {
-                "mark": {"type": "line", "color": "#ffaebc"},
+                "mark": {"type": "rule", point: {fill: '#ffaebc'}, "color": "#ffaebc", "xOffset": 3},
                 "encoding": {
                   "y": {
                     "field": "latest_sapphire_block_time_age_min",
@@ -82,7 +82,7 @@
               "select": {"type": "interval", "encodings": ["x"]},
               "bind": "scales"
             }],
-            "mark": {"type": "line", point: {fill: '#85C5A6'}, strokeDash: [1, 8], "color": "#85C5A6"},
+            "mark": {"type": "rule", point: {fill: '#85C5A6'}, "color": "#85C5A6", "xOffset": 5},
             "encoding": {
               "y": {
                 "field": "latest_node_block_diff",
